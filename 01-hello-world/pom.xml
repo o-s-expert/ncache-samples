@@ -5,7 +5,7 @@
     <name>01-hello-world</name>
 
     <parent>
-        <groupId>expert.os.samples.harperdb</groupId>
+        <groupId>expert.os.samples.ncache</groupId>
         <artifactId>parent</artifactId>
         <version>1.0.0</version>
     </parent>
