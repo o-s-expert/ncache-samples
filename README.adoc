@@ -1,78 +1,44 @@
-= HarperDB and Java Sample Projects
-:toc: auto
+= Ncache Samples Repository
 
-:license: Apache License 2.0
-:link-license: https://www.apache.org/licenses/LICENSE-2.0
+:author: Your Name
+:email: your@email.com
+:revnumber: 1.0
+:revdate: 2023-11-05
 
 == Overview
 
-This repository contains multiple Java projects that demonstrate how to integrate HarperDB with different Java frameworks, including Quarkus, Micronaut, and Spring. You can choose to use the cloud-based HarperDB solution at link:https://studio.harperdb.io/sign-up[HarperDB Cloud] or run it locally using Docker.
+This repository contains sample projects and documentation related to Ncache, a powerful caching solution for Java applications. Ncache is an essential component for enhancing the performance, scalability, and reliability of Java applications, especially in distributed environments. This README will provide an overview of Ncache and introduce the available sample project in this repository.
 
-To run HarperDB locally with Docker, execute the following command:
+Ncache is a distributed, in-memory caching solution that allows Java applications to efficiently manage and store data in-memory. It serves as a high-performance data storage and retrieval mechanism, significantly improving the response times of your applications. Ncache is particularly beneficial for Java applications because it enables:
 
-[source,bash]
-----
-docker run -d \
-  -e HDB_ADMIN_USERNAME=root \
-  -e HDB_ADMIN_PASSWORD=password \
-  -e HTTP_THREADS=4 \
-  -p 9925:9925 \
-  -p 9926:9926 \
-  harperdb/harperdb
-----
+* Scalability: Ncache can seamlessly scale out to accommodate growing workloads, ensuring that your Java applications can handle increased traffic without performance degradation.
 
-== Getting Started
+* Data Caching: By storing frequently accessed data in-memory, Ncache minimizes the need to query databases repeatedly, resulting in faster data access and reduced latency.
 
-Follow these steps to set up and run the projects:
+* High Availability: Ncache provides data replication and clustering capabilities, ensuring that your Java applications remain available even in the face of node failures.
 
-* **Install Maven:** If you don't have Maven installed, you can download it from link:https://maven.apache.org/download.cgi[Maven Apache] and follow the installation instructions.
+* Data Consistency: Ncache offers support for data caching patterns like Cache-Aside and Cache-Through, maintaining data consistency between the cache and data sources.
 
-* **Clone the Repository:**
+* Integration: Ncache seamlessly integrates with various Java technologies, making it easy to incorporate into your existing applications.
 
-[source,bash]
-----
-git clone <repository_url>
-cd harperdb-samples
-----
+== Sample Projects
 
-* **Choose a Project:**
+This repository hosts a collection of sample projects that demonstrate how to integrate Ncache with Java applications. Currently, there is one sample project available:
 
-- Navigate to the subdirectories (e.g., `quarkus-project`, `micronaut-project`, `spring-project`) for the Java framework you want to explore.
+* link:01-hello-world/[01 Hello World]: A simple Java application that serves as a "Hello World" introduction to connecting to Ncache. This project provides a basic example of setting up Ncache within a Java application and performing some simple caching operations. It is an excellent starting point for developers looking to get acquainted with Ncache integration in Java applications.
 
-* **Configure HarperDB:**
+=== Getting Started
 
-- If you are using HarperDB Cloud, sign up for an account at link:https://studio.harperdb.io/sign-up[HarperDB Cloud] and obtain your API credentials.
-- If you are running HarperDB locally with Docker, ensure Docker is running with the provided configuration.
+To get started with the sample projects, follow the README instructions within each project's directory. You can explore and test the provided samples to understand how Ncache can be used effectively in your Java applications.
 
-* **Update Configuration:**
+== Contributing
 
-- Open the relevant configuration files in the selected Java project (e.g., `application.properties`, `harperdb.properties`) and configure your HarperDB connection details.
-
-* **Build and Run:**
-
-[source,bash]
-----
-mvn clean install
-----
-
-* **Access the Applications:** Open your web browser and navigate to the respective application endpoints to interact with each Java project.
-
-== Resources
-
-- HarperDB Documentation: link:https://docs.harperdb.io/docs/[HarperDB Documentation]
-- HarperDB API Documentation: link:https://api.harperdb.io/[HarperDB API]
-
-Feel free to explore the provided sample code, customize it for your use cases, and leverage HarperDB's capabilities to build modern and efficient Java applications with different frameworks.
-
-For detailed usage and integration instructions, refer to the documentation links provided above.
-
-
-=== Projects
-
-* link:01-hello-world/[01 Hello World]: A simple Java application that demonstrates how to connect to HarperDB and perform basic CRUD operations.
-* link:02-hello-world-quarkus/[02 Hello World Quarkus]: A simple Quarkus application that demonstrates how to connect to HarperDB and perform basic CRUD operations.
+If you would like to contribute to this repository by adding more sample projects or improving the documentation, please feel free to fork this repository and create a pull request with your changes. We welcome contributions from the community to help others learn about Ncache and its integration with Java.
 
 == License
 
-This project is licensed under the link:https://www.apache.org/licenses/LICENSE-2.0[Apache License 2.0].
+This repository and its sample projects are open-source and available under the MIT License. You can find the full license details in the LICENSE file.
 
+For any questions, support, or more information about Ncache, please visit the official Ncache website: https://www.alachisoft.com/ncache/
+
+We hope you find these Ncache sample projects helpful in enhancing the performance and scalability of your Java applications!
