@@ -14,11 +14,7 @@ public class App {
         CacheManager manager = provider.getCacheManager();
         // Get a cache from manager via its string name.
         javax.cache.Cache<Object, Object> jCache = manager.getCache("demoCache");
-        jCache.put("key", "value");
-        System.out.println("Caching with NCache: " + jCache.get("key"));
-        /*Remove data from the cache*/
-        Boolean result = jCache.remove("key");
-
+        jCache.put("key", "value");;
 
     }
 
